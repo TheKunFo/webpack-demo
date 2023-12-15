@@ -21,4 +21,14 @@ module.exports = {
     liveReload: true,
     hot: false,
   },
+  target: ["web", "es5"],
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        loader: "babel-loader",
+        exclude: "/node_modules/",
+      },
+    ],
+  },
 };
